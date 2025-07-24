@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Ignacio Portfolio">
+    <meta name="keywords" content="Ignacio Portfolio">
+
+    <title>Ignacio Lumbano | Portfolio</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header id="cabecera" class="header container">
+
+        <div class="header__content">
+
+            <button aria-label="mobile nav button" class="header__bars">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+
+            <h1 class="header__title">Ignacio Lumbano | Portfolio</h1>
+
+            <nav>
+                <ul class="header__menu">
+                    <li><a class="header__link" href="#algorithmViewer">AlgorithmViewer</a></li>
+                    <li><a class="header__link" href="#chessAI">ChessAI</a></li>
+                    <li><a class="header__link" href="#gameOfLife">GameOfLife</a></li>
+                    <li><a class="header__link" href="#smartWatch">SmartWatch</a></li>
+                    <li>
+                        <button aria-label="theme-toggle btn" class="theme-toggle header__sun">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+                            </svg>
+                        </button>
+                    </li>
+                    <li>
+                        <a class="header__resume btn" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <img class="header__photo" src="images/perfil/foto.jpg" alt="Foto perfil">
+
+
+    </header>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <nav>
+            <ul class="mobile-nav__menu">
+                <li>
+                    <a class="mobile-nav__link" href="#algorithmViewer">AlgorithmViewer</a>
+                </li>
+                <li>
+                    <a class="mobile-nav__link" href="#chessAI">ChessAI</a>
+                </li>
+                <li>
+                    <a class="mobile-nav__link" href="#gameOfLife">GameOfLife</a>
+                </li>
+                <li>
+                    <a class="mobile-nav__link" href="#smartWatch">SmartWatch</a>
+                </li>
+                <li class="mobile-nav__link-line"></li>
+                <li>
+                    <button aria-label="theme-toggle btn" class="theme-toggle mobile-nav__sun">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <a class="mobile-nav__btn btn" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <section id="about" class="about container">
+            <div>
+
+            </div>
+            <h2 class="about__title">About</h2>
+            <div class="about__content">
+                <div class="about__description">
+                    <p>My name is Ignacio, and I am currently commencing the <i>final year</i> of my degree in <strong>Computer Engineering</strong> at the 
+                      <i>Universidad Complutense de Madrid</i>.
+                    </p>
+                    <p>Welcome to my portfolio, where I present a curated selection of academic and personal projects.</p>
+
+                </div>
+
+                <hr class="about__hr">
+
+                <h3 class="about__subtitle">Technologies</h3>
+                <div class="about__ul-container">
+                    <ul class="about__ul">
+                        <li class="about__list">C++ 11</li>
+                        <li class="about__list">Embedded C</li>
+                        <li class="about__list">Java</li>
+                    </ul>
+                    <ul class="about__ul">
+                        <li class="about__list">Linux</li>
+                        <li class="about__list">VHDL</li>
+                        <li class="about__list">Bash</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="projects-title">Projects</h2>
+
+            <!-- Sección para el proyecto Unity -->
+<article class="project container" id="unityGame">
+    <div class="project__content">
+        <div class="project__info">
+            <h3 class="project__title">SCI-FI Videogame (Unity)</h3>
+            <p class="project__subtitle">Spring 2024 | Unity | C#</p>
+            <p class="project__description">
+                Videojuego 2D desarrollado en Unity que mezcla plataformas, resolución de puzles y combate contra enemigos.
+                El proyecto incorpora mecánicas variadas y un enfoque técnico en IA, interfaz y efectos visuales.
+            </p>
+            <h4>Destrezas implementadas:</h4>
+            <ul>
+                <li>IA para enemigos con patrones de comportamiento</li>
+                <li>Interfaz de usuario (UI) personalizada con elementos dinámicos</li>
+                <li>Sistemas de partículas (VFX) para combate, daño, entorno</li>
+                <li>Programación orientada a objetos</li>
+                <li>Control de físicas y animaciones 2D</li>
+                <li>Diseño modular y reutilizable de escenas</li>
+            </ul>
+        </div>
+
+        <div class="project__show image-grid">
+            <img src="images/unityGame/1.png" alt="Gameplay 1" class="project__img" />
+            <img src="images/unityGame/2.png" alt="Gameplay 2" class="project__img" />
+            <img src="images/unityGame/3.png" alt="Gameplay 3" class="project__img" />
+            <img src="images/unityGame/4.png" alt="Gameplay 4" class="project__img" />
+        </div>
+    </div>
+</article>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+
+        <nav id="contact">
+            <ul class="footer__menu">
+                <li>
+                    <a class="footer__link" href="https://es.linkedin.com/in/ignacio-lumbano-vivar-86b010375" target="_blank">
+                        <img class="footer__icon" src="images/icons/Linkedin.png" alt="LinkedIn">
+                        LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a class="footer__link" href="https://github.com/IgnacioXr7" target="_blank">
+                        <img class="footer__icon" src="images/icons/Github.png" alt="Github">
+                        Github
+                    </a>
+                </li>
+                <li>
+                    <a class="footer__link" href="mailto:livfaswcord2@gmail.com" target="_blank">
+                        <img class="footer__icon" src="images/icons/email.png" alt="Email">
+                        livfaswcord2@gmail.com
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <h3 class="footer__title">Ignacio Lumbano | 2025</h3>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
