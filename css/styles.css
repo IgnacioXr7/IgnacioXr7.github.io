@@ -32,15 +32,17 @@ body {
 
 /* ===== HEADER ===== */
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    position: relative;
-    z-index: 9999;
-    background-color: var(--clr-slate800);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  position: relative;
+  z-index: 9999;
+  background: linear-gradient(135deg, #0a0f1a 0%, #111827 100%);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
 }
 
 .header__content {
@@ -66,9 +68,9 @@ body {
 
 .header__photo {
     border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
-    padding: 0.20rem 0.20rem;
+    width: 6rem;
+    height: 6rem;
+    padding: 0.15rem 0.15rem;
 }
 
 .header__bars {
@@ -79,12 +81,65 @@ body {
 }
 
 .header__title {
-    color: var(--clr-slate400);
-    text-transform: uppercase;
-    font-size: var(--size-1xl);
-    letter-spacing: -0.05em;
-    line-height: 0.9;
+  color: #00ffff;
+  text-transform: uppercase;
+  font-size: var(--size-1xl);
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  text-shadow: 0 0 4px #00ffff, 0 0 8px rgba(0, 255, 255, 0.5);
+  transition: text-shadow 0.3s ease-in-out;
 }
+.header__title:hover {
+  text-shadow: 0 0 12px #00ffff, 0 0 15px rgba(0, 255, 255, 0.7);
+}
+
+.header__link {
+  display: inline-block;
+  font-size: var(--size-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #00fff7;
+  background: linear-gradient(135deg, #111827, #1e293b);
+  border: 1px solid #00fff7;
+  border-radius: 12px;
+  padding: 0.75rem 1.25rem;
+  margin: 0.5rem;
+  letter-spacing: 0.05em;
+  box-shadow: 0 0 10px #00fff77a, 0 0 20px #00fff733 inset;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.header__link::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #00fff7, #00d9ff, #00fff7);
+  z-index: -1;
+  border-radius: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  filter: blur(10px);
+}
+
+.header__link:hover {
+  color: #0f172a;
+  background: #00fff7;
+  box-shadow: 0 0 15px #00fff7aa, 0 0 25px #00fff755;
+  transform: translateY(-3px) scale(1.03);
+}
+
+.header__link:hover::before {
+  opacity: 1;
+}
+
+
 
 /* xs */
 @media (min-width: 475px) {
@@ -585,7 +640,7 @@ body.light-mode .btn:hover {
     --clr-slate400: #94a3b8;
     --clr-slate600: #475569;
     --clr-slate800: #1e293b;
-    --clr-rose: #e11d48;
+    --clr-rose: #07ad76;
     --clr-indigo: #4f46e5;
 
     /* rose rgb(225, 29, 72) */
@@ -945,54 +1000,62 @@ Add the correct display in Chrome and Safari.
 summary {
   display: list-item;
 }
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    align-items: center;
-    padding: 1rem 1rem;
-    position: relative;
-    width: 100%;
-    bottom: 0;
+.footer {
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 1px solid var(--accent);
+  margin-top: 4rem;
+  background: linear-gradient(135deg, #0a0f1a, #111827);
+  box-shadow: 0 0 15px rgba(0, 230, 230, 0.5);
+  color: var(--accent);
+  font-family: var(--font-main);
 }
 
-
 .footer__menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
-    gap: 0.4em;
-    padding: 1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer__link {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    font-size: var(--size-xs);
-    text-decoration: none;
-    text-align: center;
-    font-weight: 600;
-    color: #fff;
-    background-color: #597d90;
-    padding: 0.4rem 0.4rem;
-    border-radius: 0.5rem;
-    letter-spacing: -0.05rem;
-    transition: color 0.3s;
-    width: 10rem;
+  color: var(--accent);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .footer__link:hover {
-    background-color: #01121b;
+  color: var(--accent-hover);
+  text-shadow: 0 0 10px var(--accent-hover);
+  transform: translateY(-2px);
 }
 
 .footer__icon {
-    width: 1rem;
-    height: 1rem;
-    margin-right: 0.3rem;
+  width: 20px;
+  height: 20px;
+  filter: drop-shadow(0 0 2px var(--accent));
+  transition: filter 0.3s ease;
+}
+
+.footer__link:hover .footer__icon {
+  filter: drop-shadow(0 0 5px var(--accent-hover));
+}
+
+.footer__title {
+  color: var(--accent);
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  text-shadow: 0 0 5px var(--accent);
+  letter-spacing: 0.05em;
+  font-weight: 700;
 }
 
 
@@ -1075,15 +1138,15 @@ footer {
     color: #f1f5f9;
     padding: 0.5em 1em;
     border-radius: 6px;
-    box-shadow: 0 10px 20px rgba(225, 29, 72, 0.5),
-      0 6px 6px rgba(225, 29, 72, 0.5), 0 0 100px -10px var(--clr-rose);
+    box-shadow: 0 10px 20px rgba(45, 218, 131, 0.5),
+      0 6px 6px rgba(23, 212, 23, 0.5), 0 0 100px -10px var(--clr-rose);
     transition: transform 0.3s, box-shadow 0.3s;
   }
   
   .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 14px 28px rgba(225, 29, 72, 0.25),
-      0 10px 10px rgba(225, 29, 72, 0.22), 0 0 120px -10px var(--clr-rose);
+    box-shadow: 0 14px 28px rgba(29, 225, 104, 0.25),
+      0 10px 10px rgba(29, 225, 55, 0.22), 0 0 120px -10px var(--clr-rose);
   }
   
   .container {
@@ -1154,3 +1217,32 @@ footer {
       max-width: 1536px;
     }
   }
+
+ .project__actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.futuristic-btn,
+.play-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: 2px solid #0ff;
+  background: rgba(0, 255, 255, 0.05);
+  color: #0ff;
+  border-radius: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: 'Orbitron', sans-serif; /* Puedes incluir esta fuente desde Google Fonts para dar look sci-fi */
+  box-shadow: 0 0 12px #0ff;
+}
+
+.futuristic-btn:hover,
+.play-btn:hover {
+  background: #0ff;
+  color: #000;
+  box-shadow: 0 0 20px #0ff;
+}
